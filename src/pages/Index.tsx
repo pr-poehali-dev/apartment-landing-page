@@ -10,33 +10,34 @@ const PHOTOS = [
 ];
 
 const SPECS = [
-  { label: 'Площадь', value: '64,5', unit: 'м²', icon: 'Maximize2' },
+  { label: 'Площадь', value: '97,6', unit: 'м²', icon: 'Maximize2' },
   { label: 'Комнат', value: '2', unit: 'комн.', icon: 'DoorOpen' },
-  { label: 'Этаж', value: '7', unit: 'из 16', icon: 'Building2' },
-  { label: 'Год постройки', value: '2021', unit: 'г.', icon: 'CalendarDays' },
-  { label: 'Санузел', value: '2', unit: 'разд.', icon: 'Bath' },
-  { label: 'Высота потолков', value: '2,75', unit: 'м', icon: 'MoveVertical' },
+  { label: 'Этаж', value: '1', unit: 'из 5', icon: 'Building2' },
+  { label: 'Санузла', value: '2', unit: 'шт.', icon: 'Bath' },
+  { label: 'Тип дома', value: 'Кирпич', unit: '', icon: 'BrickWall' },
+  { label: 'Гор. телефон', value: '2', unit: 'линии', icon: 'PhoneCall' },
 ];
 
 const DETAILS = [
-  { label: 'Тип дома', value: 'Монолит-кирпич' },
-  { label: 'Отделка', value: 'Чистовая, евроремонт' },
-  { label: 'Балкон', value: 'Застеклённая лоджия' },
-  { label: 'Парковка', value: 'Подземная + гостевая' },
-  { label: 'Лифт', value: 'Пассажирский + грузовой' },
-  { label: 'Документы', value: 'Собственность, 1 владелец' },
+  { label: 'Тип дома', value: 'Кирпичный, 5 этажей' },
+  { label: 'Особенность', value: 'Индивидуальный вход' },
+  { label: 'Придомовая территория', value: 'Собственная' },
+  { label: 'Кухня', value: 'Совмещена с лоджией' },
+  { label: 'Лоджия', value: 'Застеклённая' },
+  { label: 'Городской телефон', value: '2 линии' },
 ];
 
 const INFRA = [
-  { icon: 'GraduationCap', title: 'Школа №5', dist: '350 м' },
-  { icon: 'Baby', title: 'Детский сад', dist: '200 м' },
-  { icon: 'ShoppingCart', title: 'ТЦ «Мармелад»', dist: '600 м' },
-  { icon: 'Trees', title: 'Парк Мира', dist: '450 м' },
-  { icon: 'Bus', title: 'Остановка', dist: '120 м' },
-  { icon: 'Stethoscope', title: 'Поликлиника', dist: '800 м' },
+  { icon: 'GraduationCap', title: 'Школа', dist: 'Шаговая доступность' },
+  { icon: 'ShoppingCart', title: 'Супермаркеты', dist: 'Рядом' },
+  { icon: 'Store', title: 'ТЦ «Форум» и «Луч»', dist: 'Рядом' },
+  { icon: 'Dumbbell', title: 'Спорткомплекс «Парнас»', dist: 'Рядом' },
+  { icon: 'Car', title: 'Центр города', dist: '5 минут на авто' },
+  { icon: 'Footprints', title: 'Центр пешком', dist: '15 минут' },
 ];
 
 const NAV = [
+  { id: 'about', label: 'О квартире' },
   { id: 'specs', label: 'Характеристики' },
   { id: 'gallery', label: 'Фото' },
   { id: 'video', label: 'Видео' },
@@ -92,16 +93,21 @@ const Index = () => {
               <Icon name="MapPin" size={14} /> Вологда, ул. Ленинградская, 144
             </span>
             <h1 className="mt-6 font-display text-4xl font-700 leading-tight md:text-6xl">
-              2-комнатная квартира 64,5 м²
+              2-комнатная квартира 97,6 м²
             </h1>
             <p className="mt-4 max-w-md text-primary-foreground/70">
-              Светлая видовая квартира с евроремонтом в монолитном доме 2021 года.
-              Развитая инфраструктура, подземный паркинг.
+              Просторная квартира на первом этаже кирпичного дома с индивидуальным
+              входом и собственной придомовой территорией. Развитый район, центр в 5 минутах.
             </p>
-            <div className="mt-8 flex items-end gap-4">
-              <span className="font-display text-5xl font-700 tnum">11 000 000 ₽</span>
-              <span className="pb-2 text-sm text-primary-foreground/60">
-                170 542 ₽/м²
+            <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2">
+              <span className="inline-flex items-center gap-2 rounded-md bg-accent/10 px-3 py-2 text-sm text-accent">
+                <Icon name="DoorOpen" size={16} /> Индивидуальный вход
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-md bg-accent/10 px-3 py-2 text-sm text-accent">
+                <Icon name="Trees" size={16} /> Своя территория
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-md bg-accent/10 px-3 py-2 text-sm text-accent">
+                <Icon name="Bath" size={16} /> Два санузла
               </span>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -125,9 +131,46 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ABOUT */}
+      <section id="about" className="container py-16 md:py-24">
+        <SectionTitle num="01" title="О квартире" />
+        <div className="mt-10 grid gap-10 md:grid-cols-[1.5fr_1fr]">
+          <p className="text-lg leading-relaxed text-foreground/80">
+            Просторная двухкомнатная квартира площадью 97,6 м² расположена на первом
+            этаже пятиэтажного кирпичного дома в удобном и развитом районе. Главное
+            преимущество объекта — индивидуальный вход и собственная придомовая
+            территория, которую можно обустроить по своему вкусу: разбить клумбу,
+            поставить лавочку или организовать место для отдыха.
+            <br /><br />
+            Планировка продумана для комфортного проживания: два санузла, два городских
+            телефона, кухня совмещена с застеклённой лоджией, что создаёт дополнительное
+            светлое пространство, а большая гостиная позволяет принимать гостей. Дом
+            подходит как для постоянного проживания, так и для инвестиции — благодаря
+            удачному расположению и удобной планировке квартира будет пользоваться
+            стабильным спросом.
+          </p>
+          <div className="space-y-3">
+            {[
+              'Индивидуальный вход в квартиру',
+              'Собственная придомовая территория',
+              'Два раздельных санузла',
+              'Кухня совмещена с лоджией',
+              'Две линии городского телефона',
+              'Развитый район, центр в 5 минутах',
+            ].map((t) => (
+              <div key={t} className="flex items-start gap-3">
+                <Icon name="Check" size={20} className="mt-0.5 shrink-0 text-accent" />
+                <span className="text-foreground/80">{t}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SPECS */}
-      <section id="specs" className="container py-16 md:py-24">
-        <SectionTitle num="01" title="Характеристики" />
+      <section id="specs" className="bg-secondary py-16 md:py-24">
+        <div className="container">
+        <SectionTitle num="02" title="Характеристики" />
         <div className="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-border bg-border md:grid-cols-3 lg:grid-cols-6">
           {SPECS.map((s) => (
             <div key={s.label} className="bg-card p-6">
@@ -151,12 +194,13 @@ const Index = () => {
             </div>
           ))}
         </div>
+        </div>
       </section>
 
       {/* GALLERY */}
-      <section id="gallery" className="bg-secondary py-16 md:py-24">
+      <section id="gallery" className="py-16 md:py-24">
         <div className="container">
-          <SectionTitle num="02" title="Фотографии" />
+          <SectionTitle num="03" title="Фотографии" />
           <div className="mt-10 overflow-hidden rounded-lg">
             <img
               src={PHOTOS[activePhoto]}
@@ -182,7 +226,7 @@ const Index = () => {
 
       {/* VIDEO */}
       <section id="video" className="container py-16 md:py-24">
-        <SectionTitle num="03" title="Видео-обзор квартиры и района" />
+        <SectionTitle num="04" title="Видео-обзор квартиры и района" />
         <div className="mt-10 overflow-hidden rounded-lg border border-border bg-black">
           <div className="relative aspect-video">
             <iframe
@@ -202,7 +246,7 @@ const Index = () => {
       {/* INFRA */}
       <section id="infra" className="bg-secondary py-16 md:py-24">
         <div className="container">
-          <SectionTitle num="04" title="Инфраструктура района" />
+          <SectionTitle num="05" title="Инфраструктура района" />
           <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
             {INFRA.map((i) => (
               <div key={i.title} className="flex items-center gap-4 bg-card p-6">
@@ -223,7 +267,7 @@ const Index = () => {
       <section id="contact" className="bg-primary py-16 text-primary-foreground md:py-24">
         <div className="container grid gap-12 md:grid-cols-2">
           <div>
-            <SectionTitle num="05" title="Записаться на просмотр" light />
+            <SectionTitle num="06" title="Записаться на просмотр" light />
             <p className="mt-6 max-w-md text-primary-foreground/70">
               Оставьте контакты — свяжемся в течение часа и согласуем удобное время показа.
             </p>
