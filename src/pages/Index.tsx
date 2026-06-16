@@ -4,9 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
 const PHOTOS = [
-  'https://cdn.poehali.dev/projects/e8ec8e00-f260-4974-b1f2-bf56125189b0/files/1379bcc4-04e3-4b83-8fe1-f26293534797.jpg',
-  'https://cdn.poehali.dev/projects/e8ec8e00-f260-4974-b1f2-bf56125189b0/files/25cc74fe-2e1e-46bf-ba83-5eeeb5e454f3.jpg',
-  'https://cdn.poehali.dev/projects/e8ec8e00-f260-4974-b1f2-bf56125189b0/files/858d81fd-b077-4124-96ad-83c87049979c.jpg',
+  'https://img.dmclk.ru/s1200x800q80/vitrina/ca/e5/cae56188aa5de6ee14b1529f7445520dd48a4866.webp',
 ];
 
 const SPECS = [
