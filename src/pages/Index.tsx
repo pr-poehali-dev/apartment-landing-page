@@ -120,7 +120,11 @@ const Index = () => {
               Просторная квартира на первом этаже кирпичного дома с индивидуальным
               входом и собственной придомовой территорией. Развитый район, центр в 5 минутах.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2">
+            <div className="mt-8 flex items-end gap-4">
+              <span className="font-display text-5xl font-700 tnum">11 000 000 ₽</span>
+              <span className="pb-2 text-sm text-primary-foreground/60">112 705 ₽/м²</span>
+            </div>
+            <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
               <span className="inline-flex items-center gap-2 rounded-md bg-accent/10 px-3 py-2 text-sm text-accent">
                 <Icon name="DoorOpen" size={16} /> Индивидуальный вход
               </span>
