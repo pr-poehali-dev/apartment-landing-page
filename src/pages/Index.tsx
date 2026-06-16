@@ -8,6 +8,7 @@ const PHOTOS = [
   'https://img.dmclk.ru/s1200x800q80/vitrina/4d/45/4d450118bae1e63bc3a94d485ac0831e9be28819.webp',
   'https://img.dmclk.ru/s1200x800q80/vitrina/f6/10/f61084ee312a8b95312477a8c8d310f459dbb61d.webp',
   'https://img.dmclk.ru/s1200x800q80/vitrina/96/9c/969c8377d4d23e4f7081d945fe94da96af93b5fc.webp',
+  'https://img.dmclk.ru/s1200x800q80/vitrina/d4/16/d416fcdbc3f66a1fd0f2a767905e229b289389d6.webp',
 ];
 
 const SPECS = [
