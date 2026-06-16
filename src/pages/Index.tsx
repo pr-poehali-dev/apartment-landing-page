@@ -297,8 +297,8 @@ const Index = () => {
               Оставьте контакты — свяжемся в течение часа и согласуем удобное время показа.
             </p>
             <div className="mt-8 space-y-4">
-              <a href="tel:+79000000000" className="flex items-center gap-3 hover:text-accent">
-                <Icon name="Phone" size={20} className="text-accent" /> +7 (900) 000-00-00
+              <a href="tel:+79302256278" className="flex items-center gap-3 hover:text-accent">
+                <Icon name="Phone" size={20} className="text-accent" /> +7 930 225-62-78
               </a>
               <div className="flex items-center gap-3">
                 <Icon name="Clock" size={20} className="text-accent" /> Ежедневно 9:00–21:00
