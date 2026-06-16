@@ -12,19 +12,19 @@ const PHOTOS = [
 const SPECS = [
   { label: 'Площадь', value: '97,6', unit: 'м²', icon: 'Maximize2' },
   { label: 'Комнат', value: '2', unit: 'комн.', icon: 'DoorOpen' },
-  { label: 'Этаж', value: '1', unit: 'из 5', icon: 'Building2' },
-  { label: 'Санузла', value: '2', unit: 'шт.', icon: 'Bath' },
-  { label: 'Тип дома', value: 'Кирпич', unit: '', icon: 'BrickWall' },
-  { label: 'Гор. телефон', value: '2', unit: 'линии', icon: 'PhoneCall' },
+  { label: 'Этаж', value: '1', unit: 'из 6', icon: 'Building2' },
+  { label: 'Кухня', value: '15', unit: 'м²', icon: 'ChefHat' },
+  { label: 'Балкон', value: '1', unit: 'шт.', icon: 'Columns2' },
+  { label: 'Газ', value: 'Есть', unit: '', icon: 'Flame' },
 ];
 
 const DETAILS = [
-  { label: 'Тип дома', value: 'Кирпичный, 5 этажей' },
-  { label: 'Особенность', value: 'Индивидуальный вход' },
-  { label: 'Придомовая территория', value: 'Собственная' },
-  { label: 'Кухня', value: 'Совмещена с лоджией' },
-  { label: 'Лоджия', value: 'Застеклённая' },
-  { label: 'Городской телефон', value: '2 линии' },
+  { label: 'Тип жилья', value: 'Квартира' },
+  { label: 'Этажность дома', value: '6 этажей' },
+  { label: 'Ремонт', value: 'Косметический' },
+  { label: 'Тип сделки', value: 'Свободная продажа' },
+  { label: 'Балконы', value: '1 балкон' },
+  { label: 'Газ', value: 'Есть' },
 ];
 
 const INFRA = [
@@ -58,7 +58,7 @@ const Index = () => {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2 font-display text-lg font-600 tracking-wide">
             <Icon name="Home" size={20} className="text-accent" />
-            ВОЛОГДА · 2-комн.
+            ВОЛОГДА · 2-комн. · 97,6 м²
           </div>
           <nav className="hidden gap-7 md:flex">
             {NAV.map((n) => (
@@ -90,7 +90,7 @@ const Index = () => {
         <div className="container relative grid gap-10 py-20 md:grid-cols-2 md:py-28">
           <div className="animate-fade-in">
             <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs uppercase tracking-widest text-accent">
-              <Icon name="MapPin" size={14} /> Вологда, ул. Ленинградская, 144
+              <Icon name="MapPin" size={14} /> Вологда, Ленинградская ул., 76а
             </span>
             <h1 className="mt-6 font-display text-4xl font-700 leading-tight md:text-6xl">
               2-комнатная квартира 97,6 м²
@@ -303,7 +303,7 @@ const Index = () => {
       </section>
 
       <footer className="border-t border-border bg-primary py-6 text-center text-sm text-primary-foreground/50">
-        Вологда, ул. Ленинградская, 144 · Продажа квартиры собственником
+        Вологда, Ленинградская ул., 76а · 2-комн. квартира 97,6 м² · Свободная продажа
       </footer>
     </div>
   );
