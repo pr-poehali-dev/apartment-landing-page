@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 
 const PHOTOS = [
   'https://img.dmclk.ru/s1200x800q80/vitrina/ca/e5/cae56188aa5de6ee14b1529f7445520dd48a4866.webp',
+  'https://img.dmclk.ru/s1200x800q80/vitrina/4d/45/4d450118bae1e63bc3a94d485ac0831e9be28819.webp',
 ];
 
 const SPECS = [
